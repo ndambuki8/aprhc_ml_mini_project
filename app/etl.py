@@ -14,10 +14,10 @@ def transform(df):
     filter_diff_value = df["DateJoined"].max() - pd.Timedelta(days=120)
     df = df[df["DateJoined"] >= filter_diff_value]
 
-    # ✅ Set index for resampling
+    # Set index for resampling
     df = df.set_index("DateJoined")
 
-    # ✅ Aggregate per day (count of IDs)
+    # Aggregate per day (count of IDs)
     daily_counts = df.resample("D").count()
 
     # Clean up columns
@@ -25,7 +25,7 @@ def transform(df):
 
     return daily_counts
 
-if __name__== '__main__':
-    df = load_data("dataset.json")
-    daily = transform(df)
-    print(daily.head())
+# if __name__== '__main__':
+#     df = load_data("dataset.json")
+#     daily = transform(df)
+#     print(daily.head())
