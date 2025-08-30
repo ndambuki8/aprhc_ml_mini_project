@@ -42,7 +42,7 @@ python train_model.py
 
 ### Serve predictions (Without using Docker)
 ```bash
-python serve_api.py
+python serve.py
 # available at http://localhost:5000/predict
 ```
 

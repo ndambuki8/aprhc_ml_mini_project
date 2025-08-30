@@ -25,7 +25,7 @@ def transform(df):
 
     return daily_counts
 
-# if __name__== '__main__':
-#     df = load_data("dataset.json")
-#     daily = transform(df)
-#     print(daily.head())
+if __name__== '__main__':
+    df = load_data("dataset.json")
+    daily = transform(df)
+    print(daily.head())
